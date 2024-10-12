@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloxd Man</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bloxd Man</h1>
+    </header>
+    
+    <main>
+        <section class="downloads" id="downloads">
+            <h2>Texture Pack</h2>
+            <div class="download-item">
+                <img src="image/image1.png" alt="Sample File 1">
+                <h2>Bedwars</h2>
+                <button class="download-button" onclick="downloadFile('files/Bedwars.zip', 'Bedwars.zip')">Download</button>
+            </div>
+            <div class="download-item">
+                <img src="image/image2.png" alt="Sample File 2">
+                <h2>Xray</h2>
+                <button class="download-button" onclick="downloadFile('files/Xray.zip', 'Xray.zip')">Download</button>
+            </div>
+            <div class="download-item">
+                <img src="image/image3.png" alt="Sample File 3">
+                <h2>Custom Armor</h2>
+                <button class="download-button" onclick="downloadFile('files/CustomArmor.zip', 'CustomArmor.zip')">Download</button>
+            </div>
+            <!-- Add more download-item as needed -->
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; Bloxd Man 2024</p>
+        <div class="social-media">
+            <a href="https://discord.gg/ygxeGheev6" target="_blank">Discord</a>
+            <a href="https://www.youtube.com/@Bloxdman" target="_blank">YouTube</a>
+        </div>
+    </footer>
+
+    <script>
+        function downloadFile(filePath, fileName) {
+            const link = document.createElement('a');
+            link.href = filePath;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
